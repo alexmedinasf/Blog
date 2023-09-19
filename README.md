@@ -74,25 +74,51 @@ To run tests, run the following command:
 ### Deployment
 You can deploy this project using:
 **TBA**
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## 👥 Author <a name="authors"></a>
-👤 **Alexandre Medina**
+
+👤 **ALEXANDRE MEDINA**
+
 - GitHub: [@alexmedinasf](https://github.com/alexmedinasf)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/alexmedinasf)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/alexmedinasf)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
 ## 🔭 Future Features <a name="future-features"></a>
-**TBA**
+
+
+#TBA#
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
 ## 🤝 Contributing <a name="contributing"></a>
+
 Contributions, issues, and feature requests are welcome!
+
 Feel free to check the [issues page](../../issues/).
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## ⭐️ Show your support <a name="support"></a>
-If you like this project please consider giving it a star!
+
+If you like this project give it a star!
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
-We would like to thank [Microverse](https://www.microverse.org/) for the opportunity.
+
+
+I would like to thank Microverse.
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## 📝 License <a name="license"></a>
+
 This project is [MIT](./LICENSE) licensed.
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
