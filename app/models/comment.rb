@@ -9,5 +9,3 @@ class Comment < ApplicationRecord
 
   after_save :update_comments_counter
 end
-
-end
