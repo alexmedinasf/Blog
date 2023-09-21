@@ -12,4 +12,9 @@ class User < ApplicationRecord
   def recent_comments
     comments.order(created_at: :desc).limit(5).reverse
   end
+
+  # method to return the 5 most recent likes for a given user
+  def recent_likes
+    likes.order(created_at: :desc).limit(5).reverse
+  end
 end
