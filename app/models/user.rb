@@ -7,4 +7,9 @@ class User < ApplicationRecord
   def recent_posts
     posts.order(created_at: :desc).limit(3).reverse
   end
+
+  # method to return the 5 most recent comments for a given user
+  def recent_comments
+    comments.order(created_at: :desc).limit(5).reverse
+  end
 end
