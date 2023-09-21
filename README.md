@@ -41,7 +41,7 @@
   </ul>
 </details>
 ### Key Features <a name="key-features"></a>
-**TBA**
+Use reails to add data!
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 ## 🚀 Live Demo <a name="live-demo"></a>
 
@@ -70,10 +70,10 @@ To run the project, execute the following command:
 `rails s` or `rails server`
 ### Run tests
 To run tests, run the following command:
-**TBA**
+rspec
 ### Deployment
 You can deploy this project using:
-**TBA**
+page haven't been deployed... yet!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -90,7 +90,9 @@ You can deploy this project using:
 ## 🔭 Future Features <a name="future-features"></a>
 
 
-#TBA#
+# Validations
+
+# Model specs
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
