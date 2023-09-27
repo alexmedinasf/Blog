@@ -11,7 +11,7 @@ RSpec.describe 'Posts', type: :request do
       expect(response).to render_template(:index)
     end
     it 'returns the correct placeholder text' do
-        expect(response.body).to include('Placeholder for listing all posts of a specific user')
+      expect(response.body).to include('Placeholder for listing all posts of a specific user')
     end
   end
 
@@ -25,7 +25,7 @@ RSpec.describe 'Posts', type: :request do
       expect(response).to render_template(:show)
     end
     it 'returns the correct placeholder text' do
-        expect(response.body).to include('Placeholder for showing a single post')
+      expect(response.body).to include('Placeholder for showing a single post')
     end
   end
 end
