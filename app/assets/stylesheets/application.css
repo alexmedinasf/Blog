@@ -60,6 +60,7 @@ html, body {
   gap: 1rem;
   border: gray 2px solid;
   padding: 0.5rem;
+}
  
  .user-postdata {
   display: flex;
