@@ -22,4 +22,13 @@ class User < ApplicationRecord
   def recent_likes
     likes.order(created_at: :desc).limit(5).reverse
   end
+
+  before_validation :set_defaults
+
+  private
+
+  def set_defaults
+    self.posts_counter = 0
+  end
+end
 end
