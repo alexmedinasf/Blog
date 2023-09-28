@@ -1,2 +1,23 @@
-<h1>Single Post</h1>
-<p>Placeholder for showing a single post</p>
+<div class="postdetail-container">
+  <div class="postdetail">
+    <div class="postdetail-head">
+      <h2><%= @post.title %> by <%= @user.name %></h2>
+      <div class="postdetail-details">
+        <p>Comments: <%= @post.comments_counter %></p>
+        <p>Likes: <%= @post.likes_counter%></p>
+      </div>
+    </div>
+    <div class="postdetail-post">
+      <p><%= @post.text %></p>
+    </div>
+  </div>
+  <div class="comments-container">
+  <% @post.comments.each do |comment| %>
+    <% user = User.find(comment.author_id) %>
+      <div class="comment">
+        <p><%= user.name %>:</p>
+        <p><%= comment.text %></p>
+      </div>
+    <% end %> 
+  </div>
+</div>

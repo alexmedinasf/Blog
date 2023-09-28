@@ -1,2 +1,16 @@
-<h1>Single User</h1>
-<p>Placeholder for showing a single user</p>
+<%= render partial: "shared/user", locals: { user: @user } %>
+<div class="user-bio"> 
+  <h3>Bio</h3>
+  <p><%= @user.bio %>
+</div>
+<div class="user-allposts">
+  <% @user.recent_posts.each do |post| %>
+    <div class="user-post">
+      <h3><%= post.title %></h3>
+      <p><%= post.text %></p>
+	@@ -14,4 +14,5 @@
+      </div>
+    </div>
+  <% end %>
+  <%= link_to 'See all posts', user_posts_path(@user), class: "btn-allposts"%>
+</div>
