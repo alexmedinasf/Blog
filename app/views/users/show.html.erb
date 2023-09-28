@@ -1,25 +1,16 @@
-<h1>Single User</h1>
-<p>Placeholder for showing a single user</p>
-<div>
-  <img src=<%= @user.photo %> alt="photo of user">
-  <div>
-    <p><%= @user.name %></p>
-    <p>Number of posts: <%= @user.posts_counter %></p>
-  </div>
-</div>
-<div>
-  <p>Bio</p>
+<%= render partial: "shared/user", locals: { user: @user } %>
+<div class="user-bio"> 
+  <h3>Bio</h3>
   <p><%= @user.bio %>
 </div>
-<div>
-  <% @user.posts.each do |post| %>
-    <div>
-      <p><%= post.title %></p>
+<div class="user-allposts">
+  <% @user.recent_posts.each do |post| %>
+    <div class="user-post">
+      <h3><%= post.title %></h3>
       <p><%= post.text %></p>
-      <div>
-        <p>Comments: <%= post.comments_counter %></p>
-        <p>Likes: <%= post.likes_counter %></p>
+	@@ -14,4 +14,5 @@
       </div>
     </div>
   <% end %>
+  <%= link_to 'See all posts', user_posts_path(@user), class: "btn-allposts"%>
 </div>
