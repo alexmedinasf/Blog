@@ -1,2 +1,11 @@
 <h1>All Users</h1>
 <p>Placeholder for listing all users</p>
+<% @users.each do |user| %>
+  <div>
+    <img src=<%= user.photo %> alt="photo of user">
+    <div>
+    <p><%= user.name %></p>
+    <p>Number of posts: <%= user.posts_counter %></p>
+    </div>
+  </div>
+  <% end %>

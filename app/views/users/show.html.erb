@@ -1,2 +1,25 @@
 <h1>Single User</h1>
 <p>Placeholder for showing a single user</p>
+<div>
+  <img src=<%= @user.photo %> alt="photo of user">
+  <div>
+    <p><%= @user.name %></p>
+    <p>Number of posts: <%= @user.posts_counter %></p>
+  </div>
+</div>
+<div>
+  <p>Bio</p>
+  <p><%= @user.bio %>
+</div>
+<div>
+  <% @user.posts.each do |post| %>
+    <div>
+      <p><%= post.title %></p>
+      <p><%= post.text %></p>
+      <div>
+        <p>Comments: <%= post.comments_counter %></p>
+        <p>Likes: <%= post.likes_counter %></p>
+      </div>
+    </div>
+  <% end %>
+</div>
