@@ -4,7 +4,8 @@
   padding: 0;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   width: 100%;
   font-family: 'Roboto', sans-serif;
@@ -19,7 +20,8 @@ html, body {
   gap: 1rem;
 }
 
-.user-img, .user-info {
+.user-img,
+.user-info {
   border: gray 2px solid;
   padding: 0.5rem;
 }
@@ -61,8 +63,8 @@ html, body {
   border: gray 2px solid;
   padding: 0.5rem;
 }
- 
- .user-postdata {
+
+.user-postdata {
   display: flex;
   flex-direction: row;
   gap: 1rem;
