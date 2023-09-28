@@ -20,7 +20,7 @@ class Post < ApplicationRecord
   def recent_comments
     comments.order(created_at: :desc).limit(5).reverse
   end
-  
+
   before_validation :set_defaults
 
   private
