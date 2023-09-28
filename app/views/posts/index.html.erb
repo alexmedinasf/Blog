@@ -1,2 +1,20 @@
-<h1>Posts by User</h1>
-<p>Placeholder for listing all posts of a specific user</p>
+<%= render partial: "shared/user", locals: { user: @user } %>
+<% @user.posts.each do |post| %>
+  <div class="post-detailed">
+    <p><%= post.title %></p>
+    <p><%= post.text %></p>
+    <div class="user-postdata">
+      <p>Comments: <%= post.comments_counter %></p>
+      <p>Likes: <%= post.likes_counter %></p>
+    </div>
+  </div>
+  <div class="comments-container">
+    <% post.recent_comments.each do |comment| %>
+    <% user = User.find(comment.author_id) %>
+      <div class="comment">
+        <p><%= user.name %>:</p>
+        <p> <%= comment.text %></p>
+      </div>
+    <% end %> 
+  </div>
+<% end %>  
