@@ -1,0 +1,13 @@
+<%= flash[:error] %>
+<h1>New Post</h1>
+<%= form_with model: post, url: user_posts_path, method: :post, local: true do |f| %>
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :text %><br>
+    <%= f.text_field :text %>
+  </div>
+  <%= f.submit "Create Post" %>
+<% end %>
