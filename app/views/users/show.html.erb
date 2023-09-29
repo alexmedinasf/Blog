@@ -1,5 +1,7 @@
 <%= render partial: "shared/user", locals: { user: @user } %>
-<%= link_to 'New Post', new_user_post_path(@user.id) %>
+<button class="newpost-btn">
+  <%= link_to 'New Post', new_user_post_path(@user.id) %>
+</button>
 <div class="user-bio"> 
   <h3>Bio</h3>
   <p><%= @user.bio %>
