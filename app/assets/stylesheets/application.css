@@ -13,12 +13,13 @@
  *= require_tree .
  *= require_self
  */
- 
- * {
+
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+
 html,
 body {
   height: 100%;
@@ -29,7 +30,7 @@ body {
   background-color: #f5f5f5;
 }
 
-  .container {
+.container {
   margin: 1rem 2rem;
   display: flex;
   gap: 1rem;
