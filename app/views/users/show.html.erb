@@ -1,4 +1,7 @@
 <%= render partial: "shared/user", locals: { user: @user } %>
+<button class="newpost-btn">
+  <%= link_to 'New Post', new_user_post_path(@user.id) %>
+</button>
 <div class="user-bio"> 
   <h3>Bio</h3>
   <p><%= @user.bio %>
@@ -7,8 +10,11 @@
   <% @user.recent_posts.each do |post| %>
     <div class="user-post">
       <h3><%= post.title %></h3>
+      <span class="title-date"><%= post.created_at.strftime('%F %T') %></span>
       <p><%= post.text %></p>
-	@@ -14,4 +14,5 @@
+      <div class="user-postdata">
+        <p>Comments: <%= post.comments_counter %></p>
+        <p>Likes: <%= post.likes_counter %></p>
       </div>
     </div>
   <% end %>
