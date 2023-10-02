@@ -84,6 +84,11 @@ page haven't been deployed... yet!
 - GitHub: [@alexmedinasf](https://github.com/alexmedinasf)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/alexmedinasf)
 
+👤 **DANIEL MORILLO**
+
+- GitHub: [danifromecuador](https://github.com/danifromecuador)
+- LinkedIn: [danifromecuador](https://www.linkedin.com/in/danifromecuador)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
