@@ -52,7 +52,7 @@ RSpec.describe 'post index page', type: :system do
 
     it 'shows the first 5 comments' do
       visit user_posts_path(@user)
-      expect(page).to have_css(".comment-body", :maximum => 5)
+      expect(page).to have_css('.comment-body', maximum: 5)
     end
 
     it 'shows the number of comments' do

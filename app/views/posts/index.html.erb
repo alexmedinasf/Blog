@@ -1,4 +1,4 @@
-<%= flash[:success] %>
+<%= render 'shared/flashes' %>
 <%= render partial: "shared/user", locals: { user: @user } %>
 <% @user.posts.each do |post| %>
   <%= link_to user_post_url(id: post.id) do %>
@@ -17,15 +17,14 @@
   <div class="comments-container">
     <% counter = 0 %>
     <% post.recent_comments.each do |comment| %>
-    <% user = User.find(comment.author_id) %>
       <div class="comment">
         <div class="comment-body">
           #<%= counter += 1 %>
-          <p><%= user.name %>:</p>
-          <p><%= comment.text %></p>
+          <p class="comment-name"><%= comment.author.name %>:</p>
+          <p class="comment-text"><%= comment.text %></p>
         </div>
         <span class="comment-date"><%= comment.created_at.strftime('%F %T') %></span>
       </div>
     <% end %> 
   </div>
-<% end %> 
+<% end %>  

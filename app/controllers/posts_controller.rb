@@ -3,6 +3,7 @@ class PostsController < ApplicationController
     @user = User.find(params[:user_id])
     @posts = @user.posts.order(created_at: :desc)
   end
+
   def show
     @post = Post.find(params[:id])
     @user = User.find(@post.author_id)
@@ -15,6 +16,7 @@ class PostsController < ApplicationController
       f.html { render :new, locals: { post: } }
     end
   end
+
   def create
     post = Post.new(params.require(:post).permit(:title, :text))
     post.author = current_user
@@ -30,7 +32,9 @@ class PostsController < ApplicationController
       end
     end
   end
+
   private
+
   def post_params
     params.require(:post).permit(:title, :text)
   end

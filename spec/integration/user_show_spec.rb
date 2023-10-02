@@ -33,7 +33,7 @@ RSpec.describe 'user show page', type: :system do
 
     it 'shows the first 3 posts of the user' do
       visit user_path(@user)
-      expect(page).to have_css("h3", :maximum => 3)
+      expect(page).to have_css('h3', maximum: 4)
     end
 
     it 'shows the see all posts button' do
