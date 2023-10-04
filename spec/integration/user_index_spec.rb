@@ -8,7 +8,7 @@ RSpec.describe 'User index', type: :system do
   describe 'index page for users' do
     it 'shows the name of the user' do
       visit users_path
-      expect(page).to have_content("#{@user.name}")
+      expect(page).to have_content(@user.name.to_s)
     end
 
     it 'shows the photo of the user' do
@@ -18,7 +18,7 @@ RSpec.describe 'User index', type: :system do
 
     it 'shows the number of posts written by the user' do
       visit users_path
-      expect(page).to have_content("#{@user.posts_counter}")
+      expect(page).to have_content(@user.posts_counter.to_s)
     end
   end
 end
