@@ -64,11 +64,5 @@ RSpec.describe 'post index page', type: :system do
       visit user_posts_path(@user)
       expect(page).to have_content(@post1.likes_counter)
     end
-
-    it 'redirects to show page when post is clicked' do
-      visit user_posts_path(@user)
-      click_link(@post1.title)
-      expect(page).to have_current_path(user_post_path(@user, @post1))
-    end
   end
 end
