@@ -43,5 +43,10 @@ RSpec.describe 'post show page', type: :system do
       visit user_post_path(@user, @post)
       expect(page).to have_content(@comment.author.name)
     end
+
+    it 'shows all the comments' do
+      visit user_post_path(@user, @post)
+      expect(page).to have_content(@comment.text, count: 6)
+    end
   end
 end
