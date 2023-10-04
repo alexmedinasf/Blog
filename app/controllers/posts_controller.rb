@@ -7,6 +7,7 @@ class PostsController < ApplicationController
   def show
     @post = Post.find(params[:id])
     @user = User.find(@post.author_id)
+    @posts = @user.posts.includes(:comments)
   end
 
   def new
@@ -26,7 +27,7 @@ class PostsController < ApplicationController
           redirect_to user_posts_path(current_user.id)
         else
           flash.now[:error] = 'Error: Post could not be created'
-          render :new, locals: { post: }
+          render :new, status: :unprocessable_entity, locals: { post: }
         end
       end
     end

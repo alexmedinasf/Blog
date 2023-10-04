@@ -84,15 +84,17 @@ page haven't been deployed... yet!
 - GitHub: [@alexmedinasf](https://github.com/alexmedinasf)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/alexmedinasf)
 
+👤 **DANIEL MORILLO**
+
+- GitHub: [danifromecuador](https://github.com/danifromecuador)
+- LinkedIn: [danifromecuador](https://www.linkedin.com/in/danifromecuador)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-
-# Validations
-
-# Model specs
+- **The user will be able to have a user name and a password to log in**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
