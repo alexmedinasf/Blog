@@ -94,10 +94,7 @@ page haven't been deployed... yet!
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-
-# Validations
-
-# Model specs
+- **The user will be able to have a user name and a password to log in**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
