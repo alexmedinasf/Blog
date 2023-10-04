@@ -20,6 +20,8 @@ RSpec.describe 'User index', type: :system do
       visit users_path
       expect(page).to have_content(@user.posts_counter.to_s)
     end
+    
+    # tests added by partner
 
     it 'redirects to show page when user is clicked' do
       visit users_path
