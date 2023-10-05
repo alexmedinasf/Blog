@@ -119,6 +119,51 @@ a {
   padding: 0.5rem;
 }
 
+.post-new {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 1rem 2rem;
+  border: gray 2px solid;
+  padding: 0.5rem;
+  width: fit-content;
+}
+
+.post-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.label {
+  text-decoration: dashed;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+#post_text,
+#post_title {
+  border: 1px solid gray;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  width: 400px;
+}
+
+#post_text:focus {
+  height: 500px;
+  overflow-wrap: break-word;
+}
+
+.postcreate-btn {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(230, 230, 230);
+  margin: auto;
+  padding: 0.5rem;
+  border: 1px solid black;
+  border-radius: 0.25rem;
+}
+
 .comments-container {
   margin: 0 2rem 1rem 2rem;
   border: gray 2px solid;
@@ -189,9 +234,54 @@ a {
   font-size: 0.5rem;
 }
 
+.comment-name {
+  font-weight: bold;
+}
+
+.comment-text {
+  overflow-wrap: anywhere;
+}
+
 .comment-date {
   color: gray;
   font-size: 0.75rem;
+}
+
+.comment-new {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 1rem 2rem;
+  gap: 1rem;
+}
+
+.comment-input {
+  padding: 0.5rem;
+}
+
+.comment-btn {
+  display: flex;
+  background-color: rgb(230, 230, 230);
+  margin: auto;
+  padding: 0.5rem;
+  border: 1px solid black;
+  border-radius: 0.25rem;
+  text-decoration: none;
+}
+
+.like-btn {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(230, 230, 230);
+  margin: 1rem 2rem;
+  padding: 0.5rem;
+  border: 1px solid black;
+  border-radius: 0.25rem;
+  text-decoration: none;
+}
+
+.hidden {
+  display: none;
 }
 
 .newpost-btn {
@@ -205,6 +295,122 @@ a {
   text-decoration: none;
 }
 
-.success {
-  color: green;
+.flash-success {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding: 1rem;
+  background-color: lightgreen;
+  color: darkgreen;
+  border-radius: 0 0 2rem 2rem;
+  width: fit-content;
+  animation: fadeout 4s;
+  opacity: 0;
+}
+
+.flash-error,
+.flash-alert {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding: 1rem;
+  background-color: lightcoral;
+  color: darkred;
+  border-radius: 0 0 2rem 2rem;
+  width: fit-content;
+  animation: fadeout 4s;
+  opacity: 0;
+}
+
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.btn:hover {
+  cursor: pointer;
+  transform: translateY(-1px);
+  box-shadow: 1px 2px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.flash-notice {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding: 1rem;
+  background-color: orange;
+  color: black;
+  border-radius: 0 0 2rem 2rem;
+  width: fit-content;
+  animation: fadeout 4s;
+  opacity: 0;
+}
+
+.field {
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: fit-content;
+}
+
+.container-b {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
+}
+
+#new_user {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.actions,
+.actions a {
+  margin: 0.5rem 0;
+}
+
+.rem-field {
+  padding: 0.5rem;
+}
+
+.login-btn,
+.signup-btn,
+.forget-btn,
+.reset-btn,
+.conf-btn {
+  background-color: rgb(230, 230, 230);
+  width: fit-content;
+  padding: 0.5rem;
+  border: 1px solid black;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+#user_email,
+#user_password,
+#user_password_confirmation,
+.form-control {
+  border: gray 2px solid;
+  padding: 0.5rem;
 }
