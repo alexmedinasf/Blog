@@ -12,6 +12,12 @@ class User < ApplicationRecord
   validates :bio, presence: true, length: { in: 2..500 }
   validates :posts_counter, presence: true, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
 
+  Roles = [ :admin , :default ]
+
+  def is?( requested_role )
+    self.role == requested_role.to_s
+  end
+
   # method to return the 3 most recent posts for a given user
   def recent_posts
     posts.order(created_at: :desc).limit(3).reverse
