@@ -1,3 +1,4 @@
+favicon_link_tag(source = "favicon.ico", options = {}) public
 <%= render 'shared/flashes' %>
 <div class="postdetail-container">
   <div class="postdetail">
@@ -11,7 +12,7 @@
       <div class="delete-post">
         <% if can? :destroy, @post  %>
           <%= button_to "Delete Post", { action: "destroy", id: @post.id },
-                                method: :delete %>
+                                method: :delete, class: 'del-btn btn' %>
         <% end  %>
       </div>
     </div>
@@ -31,7 +32,7 @@
         <span class="comment-date"><%= comment.created_at.strftime('%F %T') %></span>
         <div class="delete-comment">
           <% if can? :destroy, comment %>
-            <%= button_to('Destroy', user_post_comment_path(comment.author_id, comment.post_id, comment.id), method: 'delete', id: comment.id) %>
+            <%= button_to('Delete Comment', user_post_comment_path(comment.author_id, comment.post_id, comment.id), method: 'delete', id: comment.id, class: 'del-btn btn') %>
           <% end %>
         </div>
       </div>
