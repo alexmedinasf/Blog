@@ -48,6 +48,7 @@ gem 'bootsnap', require: false
 # gem "sassc-rails"
 
 group :development, :test do
+  gem 'cancancan'
   gem 'factory_bot_rails'
   gem 'rails-controller-testing'
   gem 'rspec-rails', '~> 5.0'

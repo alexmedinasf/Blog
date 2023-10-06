@@ -154,16 +154,6 @@ a {
   overflow-wrap: break-word;
 }
 
-.postcreate-btn {
-  display: flex;
-  justify-content: center;
-  background-color: rgb(230, 230, 230);
-  margin: auto;
-  padding: 0.5rem;
-  border: 1px solid black;
-  border-radius: 0.25rem;
-}
-
 .comments-container {
   margin: 0 2rem 1rem 2rem;
   border: gray 2px solid;
@@ -218,17 +208,6 @@ a {
   margin-bottom: 1rem;
 }
 
-.btn-allposts {
-  display: flex;
-  justify-content: center;
-  background-color: rgb(230, 230, 230);
-  margin: auto;
-  padding: 0.5rem;
-  border: 1px solid black;
-  border-radius: 0.25rem;
-  text-decoration: none;
-}
-
 .title-date {
   color: gray;
   font-size: 0.5rem;
@@ -259,40 +238,8 @@ a {
   padding: 0.5rem;
 }
 
-.comment-btn {
-  display: flex;
-  background-color: rgb(230, 230, 230);
-  margin: auto;
-  padding: 0.5rem;
-  border: 1px solid black;
-  border-radius: 0.25rem;
-  text-decoration: none;
-}
-
-.like-btn {
-  display: flex;
-  justify-content: center;
-  background-color: rgb(230, 230, 230);
-  margin: 1rem 2rem;
-  padding: 0.5rem;
-  border: 1px solid black;
-  border-radius: 0.25rem;
-  text-decoration: none;
-}
-
 .hidden {
   display: none;
-}
-
-.newpost-btn {
-  display: flex;
-  justify-content: center;
-  background-color: rgb(230, 230, 230);
-  margin: auto;
-  padding: 0.5rem;
-  border: 1px solid black;
-  border-radius: 0.25rem;
-  text-decoration: none;
 }
 
 .flash-success {
@@ -393,11 +340,47 @@ a {
   padding: 0.5rem;
 }
 
+.like-btn,
+.change-btn,
+.btn-allposts {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(230, 230, 230);
+  margin: 1rem 2rem;
+  padding: 0.5rem;
+  border: 1px solid black;
+  border-radius: 0.25rem;
+  text-decoration: none;
+}
+
+.newpost-btn,
+.postcreate-btn {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(230, 230, 230);
+  margin: auto;
+  padding: 0.5rem;
+  border: 1px solid black;
+  border-radius: 0.25rem;
+  text-decoration: none;
+}
+
+.comment-btn {
+  display: flex;
+  background-color: rgb(230, 230, 230);
+  margin: auto;
+  padding: 0.5rem;
+  border: 1px solid black;
+  border-radius: 0.25rem;
+  text-decoration: none;
+}
+
 .login-btn,
 .signup-btn,
 .forget-btn,
 .reset-btn,
-.conf-btn {
+.conf-btn,
+.del-btn {
   background-color: rgb(230, 230, 230);
   width: fit-content;
   padding: 0.5rem;

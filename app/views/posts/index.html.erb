@@ -2,16 +2,16 @@
 <%= render partial: "shared/user", locals: { user: @user } %>
 <% @user.posts.each do |post| %>
   <%= link_to user_post_url(id: post.id) do %>
-  <div class="post-detailed">
-    <div class="post-text">
-      <h3><%= post.title %></h3> 
-      <span class="title-date"><%= post.created_at.strftime('%F %T') %></span>
-      <p><%= post.text %></p>
-      <div class="user-postdata">
-        <p>Comments: <%= post.comments_counter %></p>
-        <p>Likes: <%= post.likes_counter %></p>
+    <div class="post-detailed">
+      <div class="post-text">
+        <h3><%= post.title %></h3>
+        <span class="title-date"><%= post.created_at.strftime('%F %T') %></span>
+        <p><%= post.text %></p>
+        <div class="user-postdata">
+          <p>Comments: <%= post.comments_counter %></p>
+          <p>Likes: <%= post.likes_counter %></p>
+        </div>
       </div>
-    </div>
     <% end %>
   </div>
   <div class="comments-container">
@@ -25,6 +25,6 @@
         </div>
         <span class="comment-date"><%= comment.created_at.strftime('%F %T') %></span>
       </div>
-    <% end %> 
+    <% end %>
   </div>
-<% end %>  
+<% end %>
