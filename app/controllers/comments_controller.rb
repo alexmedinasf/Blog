@@ -4,6 +4,7 @@ class CommentsController < ApplicationController
     @user = User.find(params[:user_id])
     @comment = Comment.new
   end
+
   def create
     @post = Post.find(params[:post_id])
     @user = User.find(params[:user_id])
@@ -25,12 +26,12 @@ class CommentsController < ApplicationController
     respond_to do |f|
       f.html do
         if comment.destroy
-        comment.update_comments_counter(params[:post_id])
-        flash[:success] = 'Comment deleted successfully'
-        redirect_to user_post_path(params[:user_id], params[:post_id])
+          comment.update_comments_counter(params[:post_id])
+          flash[:success] = 'Comment deleted successfully'
+          redirect_to user_post_path(params[:user_id], params[:post_id])
         else
-        flash.now[:error] = 'Error: Comment could not be deleted'
-        render :show, status: :unprocessable_entity, locals: { comment: }
+          flash.now[:error] = 'Error: Comment could not be deleted'
+          render :show, status: :unprocessable_entity, locals: { comment: }
         end
       end
     end

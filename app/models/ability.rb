@@ -3,9 +3,10 @@ class Ability
 
   def initialize(user)
     return unless user.present?
+
     can(:read, :all)
 
-    can([:create, :destroy], Post, author: user)
+    can(%i[create destroy], Post, author: user)
     can([:destroy], Comment, author: user)
 
     return unless user.role == 'admin'

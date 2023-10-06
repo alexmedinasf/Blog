@@ -41,7 +41,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # If you have extra params to permit, append them to the sanitizer.
   def configure_sign_up_params
     devise_parameter_sanitizer.permit(:sign_up, keys: %i[name photo bio])
-
   end
 
   # If you have extra params to permit, append them to the sanitizer.
@@ -55,7 +54,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
 
   # The path used after sign up for inactive accounts.
-  def after_inactive_sign_up_path_for(resource)
+  def after_inactive_sign_up_path_for(_resource)
     flash[:notice] = 'Please check your terminal for instructions.'
     new_session_path(resource_name)
   end

@@ -21,6 +21,7 @@ class Post < ApplicationRecord
     comments.includes(:author).order(created_at: :desc).limit(5).reverse
   end
   before_validation :set_defaults
+
   private
 
   def set_defaults
