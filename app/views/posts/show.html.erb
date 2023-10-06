@@ -8,6 +8,12 @@
         <p>Comments: <%= @post.comments_counter %></p>
         <p>Likes: <%= @post.likes_counter%></p>
       </div>
+      <div class="delete-post">
+        <% if can? :destroy, Post  %>
+          <%= button_to "Delete Post", { action: "destroy", id: @post.id },
+                                method: :delete %>
+        <% end  %>
+      </div>
     </div>
     <div class="postdetail-post">
       <p><%= @post.text %></p>
@@ -16,15 +22,15 @@
   <div class="comments-container">
     <% counter = 0 %>
     <% @comments.each do |comment| %>
-        <div class="comment">
-          <div class="comment-body">
-            #<%= counter += 1 %>
-            <p class="comment-name"><%= comment.author.name %>:</p>
-            <p class="comment-text"><%= comment.text %></p>
-          </div>
-          <span class="comment-date"><%= comment.created_at.strftime('%F %T') %></span>
+      <div class="comment">
+        <div class="comment-body">
+          #<%= counter += 1 %>
+          <p class="comment-name"><%= comment.author.name %>:</p>
+          <p class="comment-text"><%= comment.text %></p>
         </div>
-    <% end %> 
+        <span class="comment-date"><%= comment.created_at.strftime('%F %T') %></span>
+      </div>
+    <% end %>
   </div>
   <%= render partial: "likes/like", locals: { post: @post, user: @user } %>
   <%= render partial: "comments/comment", locals: { post: @post, user: @user } %>
