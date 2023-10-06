@@ -49,6 +49,7 @@ gem 'bootsnap', require: false
 
 group :development, :test do
   gem 'cancancan'
+  gem 'jwt'
   gem 'factory_bot_rails'
   gem 'rails-controller-testing'
   gem 'rspec-rails', '~> 5.0'
