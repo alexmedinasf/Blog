@@ -5,6 +5,18 @@ Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   # Defines the root path route ('/')
   root 'users#index'
+
+  namespace :api, defaults: { format: 'json' } do
+    namespace :v1 do
+      post 'login', to: 'login#auth'
+      resources :users, only: [] do
+        resources :posts, only: [:index] do
+          resources :comments, only: %i[index create]
+        end
+      end
+    end
+  end
+
   # Route to list all users
   # Route to show a specific user
   resources :users, only: %i[index show] do
