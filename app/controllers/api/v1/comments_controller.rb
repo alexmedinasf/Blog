@@ -15,10 +15,12 @@ class Api::V1::CommentsController < ApiController
       render json: @comment, status: :created
     else
       render json: { errors: @comment.errors.full_messages },
-              status: :unprocessable_entity
+             status: :unprocessable_entity
     end
   end
+
   private
+
   def comment_params
     params.require(:comment).permit(:text)
   end
